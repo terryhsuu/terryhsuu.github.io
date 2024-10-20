@@ -1,9 +1,12 @@
 navbar_entries:
-  - title: about
-    url: about
+  - title: 首頁
+    url: /index
 
-  - title: blog
-    url: blog
+  - title: Work
+    url: /work
+
+  - title: Life
+    url: /life
 
 project_entries:
   - title: Project 1

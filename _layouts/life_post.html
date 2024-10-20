@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<header>
+  {% if site.theme_config.show_navbar == true %}
+  <ul class="horizontal-list">
+      {% for item in site.data.home.navbar_entries %}
+          <li>
+          <a href="{{ item.url }}">
+              {{ item.title }}
+          </a>
+          &nbsp;&nbsp;
+          </li>
+      {% endfor %}
+  </ul>
+  <div class="dashed"></div>
+  {% endif %}
+</header>
+
+
+
+{{ content }}
+
+<h2>
+    Articles
+</h2>
+
+{% include life_list.html %}
+
+{% if site.theme_config.show_footer == true %}
+  <footer>
+    <div class="dashed"></div>
+    {% include horizontal_list.html collection=site.data.home.footer_entries %}
+  </footer>
+{% endif %}
